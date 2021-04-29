@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1F40A450263A6F81009EE8B2 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40A44F263A6F81009EE8B2 /* APIService.swift */; };
 		1F40A455263A73E1009EE8B2 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40A454263A73E1009EE8B2 /* StoreModel.swift */; };
+		1F40A45A263A81DD009EE8B2 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40A459263A81DD009EE8B2 /* ProductModel.swift */; };
+		1F40A45F263A8509009EE8B2 /* ProductsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40A45E263A8509009EE8B2 /* ProductsDetail.swift */; };
 		1F4947F126392A7200636706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4947F026392A7200636706 /* AppDelegate.swift */; };
 		1F4947F326392A7200636706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4947F226392A7200636706 /* SceneDelegate.swift */; };
 		1F4947FA26392A7300636706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4947F926392A7300636706 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		1F40A44F263A6F81009EE8B2 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		1F40A454263A73E1009EE8B2 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		1F40A459263A81DD009EE8B2 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		1F40A45E263A8509009EE8B2 /* ProductsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetail.swift; sourceTree = "<group>"; };
 		1F4947ED26392A7200636706 /* MVVMDemoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4947F026392A7200636706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F4947F226392A7200636706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				1F494832263930A900636706 /* MainVC.swift */,
+				1F40A45E263A8509009EE8B2 /* ProductsDetail.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				1F40A454263A73E1009EE8B2 /* StoreModel.swift */,
+				1F40A459263A81DD009EE8B2 /* ProductModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,6 +315,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F4947F126392A7200636706 /* AppDelegate.swift in Sources */,
+				1F40A45F263A8509009EE8B2 /* ProductsDetail.swift in Sources */,
+				1F40A45A263A81DD009EE8B2 /* ProductModel.swift in Sources */,
 				1F494833263930A900636706 /* MainVC.swift in Sources */,
 				1F40A450263A6F81009EE8B2 /* APIService.swift in Sources */,
 				1F4947F326392A7200636706 /* SceneDelegate.swift in Sources */,

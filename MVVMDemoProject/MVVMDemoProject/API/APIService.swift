@@ -34,4 +34,25 @@ class APIService {
         
     }
     
+    func getProducts(byStore storeid:Int, completion: @escaping (_ stores:[ProductModel]) -> Void) {
+        
+        guard let url = URL(string: "http://waterstoreproject-dev.us-west-1.elasticbeanstalk.com/products/list/\(storeid)") else { return }
+        
+        let request = URLRequest(url: url)
+        
+        URLSession.shared.dataTask(with: request) {
+            data, response, error in
+            if let data = data {
+                if let productsDecoded = try? JSONDecoder().decode([ProductModel].self, from: data) {
+                    completion(productsDecoded)
+                    return
+                }
+            }
+            
+            print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
+            
+        }.resume()
+        
+    }
+    
 }

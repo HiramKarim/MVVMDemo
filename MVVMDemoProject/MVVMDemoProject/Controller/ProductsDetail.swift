@@ -1,13 +1,13 @@
 //
-//  MainVC.swift
+//  ProductsDetail.swift
 //  MVVMDemoProject
 //
-//  Created by Hiram Castro on 27/04/21.
+//  Created by Hiram Castro on 28/04/21.
 //
 
 import UIKit
 
-class MainVC: UIViewController {
+class ProductsDetail: UIViewController {
     
     let tableview:UITableView = {
         let tableview = UITableView()
@@ -15,13 +15,18 @@ class MainVC: UIViewController {
         return tableview
     }()
     
-    var waterStores = [StoreModel]()
+    var storeID:Int? {
+        didSet {
+            guard let storeid = storeID else { return }
+            configUI()
+            getProductsByStore(storeid: storeid)
+        }
+    }
+    
+    var productsArray = [ProductModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configUI()
-        getStores()
     }
     
     private func configUI() {
@@ -40,49 +45,34 @@ class MainVC: UIViewController {
         
         tableview.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableview.dataSource = self
-        tableview.delegate = self
+        //tableview.delegate = self
     }
     
-    private func getStores() {
-        APIService.shared.getStores { [weak self] (storesArray) in
-            self?.waterStores = storesArray
+    private func getProductsByStore(storeid:Int) {
+        APIService.shared.getProducts(byStore: storeid) { [weak self] (products) in
+            self?.productsArray = products
             DispatchQueue.main.async {
                 self?.tableview.reloadData()
             }
         }
     }
     
-    private func getProductsByStore(storeid:Int) {
-        let productDetailVC = ProductsDetail()
-        productDetailVC.storeID = storeid
-        self.navigationController?.pushViewController(productDetailVC, animated: true)
-    }
-    
 }
 
-extension MainVC: UITableViewDataSource {
+extension ProductsDetail: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return waterStores.count
+        return productsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        let store = waterStores[indexPath.row]
+        let product = productsArray[indexPath.row]
         
-        cell.textLabel?.text = store.name
+        cell.textLabel?.text = product.name
         
         return cell
         
     }
-}
-
-extension MainVC: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let store = waterStores[indexPath.row]
-        getProductsByStore(storeid: store.id)
-    }
-    
 }
