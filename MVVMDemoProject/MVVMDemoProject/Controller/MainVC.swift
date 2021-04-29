@@ -15,10 +15,13 @@ class MainVC: UIViewController {
         return tableview
     }()
     
+    var waterStores = [StoreModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configUI()
+        getStores()
     }
     
     private func configUI() {
@@ -37,22 +40,34 @@ class MainVC: UIViewController {
         ])
         
         tableview.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableview.dataSource = self
-        tableview.reloadData()
+    }
+    
+    private func getStores() {
+        APIService.shared.getStores { [weak self] (storesArray) in
+            
+            self?.waterStores = storesArray
+            
+            DispatchQueue.main.async {
+                self?.tableview.dataSource = self
+                self?.tableview.reloadData()
+            }
+        }
     }
     
 }
 
 extension MainVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return waterStores.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = "index: \(indexPath.row)"
+        let store = waterStores[indexPath.row]
+        
+        cell.textLabel?.text = store.name
         
         return cell
         
