@@ -18,10 +18,11 @@
 		1F49480826392A7300636706 /* MVVMDemoProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49480726392A7300636706 /* MVVMDemoProjectTests.swift */; };
 		1F49481326392A7300636706 /* MVVMDemoProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49481226392A7300636706 /* MVVMDemoProjectUITests.swift */; };
 		1F494833263930A900636706 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F494832263930A900636706 /* MainVC.swift */; };
+		1F6861F626520BA300B25E1E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6861F526520BA300B25E1E /* ProductCell.swift */; };
+		1F6861FB265235EF00B25E1E /* ProductDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6861FA265235EF00B25E1E /* ProductDetailVM.swift */; };
 		1FC2AF652650A49F005E83EC /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC2AF642650A49F005E83EC /* StoreCell.swift */; };
 		1FC2AF6B2650C51D005E83EC /* ExtensionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC2AF6A2650C51D005E83EC /* ExtensionsManager.swift */; };
 		1FC2AF702650D0E1005E83EC /* StoreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC2AF6F2650D0E1005E83EC /* StoreVM.swift */; };
-		1FC2AF752650D0F0005E83EC /* StoreDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC2AF742650D0F0005E83EC /* StoreDetailVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +60,11 @@
 		1F49481226392A7300636706 /* MVVMDemoProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoProjectUITests.swift; sourceTree = "<group>"; };
 		1F49481426392A7300636706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F494832263930A900636706 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		1F6861F526520BA300B25E1E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		1F6861FA265235EF00B25E1E /* ProductDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVM.swift; sourceTree = "<group>"; };
 		1FC2AF642650A49F005E83EC /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		1FC2AF6A2650C51D005E83EC /* ExtensionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsManager.swift; sourceTree = "<group>"; };
 		1FC2AF6F2650D0E1005E83EC /* StoreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVM.swift; sourceTree = "<group>"; };
-		1FC2AF742650D0F0005E83EC /* StoreDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				1FC2AF642650A49F005E83EC /* StoreCell.swift */,
+				1F6861F526520BA300B25E1E /* ProductCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				1FC2AF6F2650D0E1005E83EC /* StoreVM.swift */,
-				1FC2AF742650D0F0005E83EC /* StoreDetailVM.swift */,
+				1F6861FA265235EF00B25E1E /* ProductDetailVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -337,12 +340,13 @@
 				1F4947F126392A7200636706 /* AppDelegate.swift in Sources */,
 				1F40A45F263A8509009EE8B2 /* ProductsDetail.swift in Sources */,
 				1F40A45A263A81DD009EE8B2 /* ProductModel.swift in Sources */,
-				1FC2AF752650D0F0005E83EC /* StoreDetailVM.swift in Sources */,
 				1F494833263930A900636706 /* MainVC.swift in Sources */,
 				1FC2AF702650D0E1005E83EC /* StoreVM.swift in Sources */,
+				1F6861FB265235EF00B25E1E /* ProductDetailVM.swift in Sources */,
 				1F40A450263A6F81009EE8B2 /* APIService.swift in Sources */,
 				1F4947F326392A7200636706 /* SceneDelegate.swift in Sources */,
 				1FC2AF6B2650C51D005E83EC /* ExtensionsManager.swift in Sources */,
+				1F6861F626520BA300B25E1E /* ProductCell.swift in Sources */,
 				1F40A455263A73E1009EE8B2 /* StoreModel.swift in Sources */,
 				1FC2AF652650A49F005E83EC /* StoreCell.swift in Sources */,
 			);

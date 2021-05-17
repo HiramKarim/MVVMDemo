@@ -78,9 +78,9 @@ class MainVC: UIViewController {
         }
     }
     
-    private func getProductsByStore(storeid:Int) {
+    private func getProductsByStore(store:StoreModel) {
         let productDetailVC = ProductsDetail()
-        productDetailVC.storeID = storeid
+        productDetailVC.storeObj = store
         self.navigationController?.pushViewController(productDetailVC, animated: true)
     }
     
@@ -89,8 +89,7 @@ class MainVC: UIViewController {
 extension MainVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let store = waterStores[indexPath.row]
-        getProductsByStore(storeid: store.storeID ?? 0)
+        getProductsByStore(store: waterStores[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

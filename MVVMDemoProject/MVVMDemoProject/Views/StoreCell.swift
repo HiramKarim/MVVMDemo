@@ -45,7 +45,7 @@ class StoreCell:UICollectionViewCell {
     
     private func addViews() {
         
-        self.contentView.backgroundColor = .white
+        self.contentView.backgroundColor = UIColor.GrayColor.backgroundGray
         self.contentView.layer.cornerRadius = 10
         
         self.contentView.dropShadow(color: .lightGray, opacity: 1, offSet: CGSize(width: -1, height: 1), radius: 10, scale: true)
@@ -66,7 +66,6 @@ class StoreCell:UICollectionViewCell {
             storeAddressLabel.topAnchor.constraint(equalTo: storeNameLabel.bottomAnchor, constant: 10),
             storeAddressLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
         ])
-        
         
     }
     

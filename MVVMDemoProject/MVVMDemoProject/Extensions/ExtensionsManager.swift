@@ -35,3 +35,15 @@ extension UIView {
     layer.rasterizationScale = scale ? UIScreen.main.scale : 1
   }
 }
+
+extension UIColor {
+    
+    struct GrayColor {
+        static let backgroundGray = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+    }
+    
+    struct BlueColor {
+        static let blueButton = UIColor(red: 30/255, green: 143/255, blue: 211/255, alpha: 1)
+    }
+    
+}
