@@ -11,7 +11,7 @@ class APIService {
     
     static let shared = APIService()
     
-    private init() {}
+    //private init() {}
     
     func getStores(completion: @escaping (_ stores:[StoreModel]) -> Void) {
         
